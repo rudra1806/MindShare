@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add a New Post</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+
+    <h1 class="page-title">MindShare</h1>
+
+    <div class="singlepost">
+        <a href="/posts" class="back-btn">← Back to Home</a>
+        <h2 class="post-heading">Add a New Post</h2>
+
+        <form action="/posts" method="post" class="edit-form">
+
+            <label for="user">Username</label>
+            <input
+                type="text"
+                id="user"
+                name="username"
+                placeholder="Enter username"
+                required
+            >
+
+            <label for="title">Title</label>
+            <input
+                type="text"
+                id="title"
+                name="title"
+                placeholder="Enter post title"
+                required
+            >
+
+            <label for="content">Content</label>
+            <textarea
+                id="content"
+                name="content"
+                rows="5"
+                placeholder="Write your post here..."
+                required
+            ></textarea>
+
+            <button type="submit" class="edit-btn">Submit Post</button>
+        </form>
+    </div>
+
+</body>
+</html>

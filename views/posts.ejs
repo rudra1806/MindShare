@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>All Posts</title>
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body>
+    <h1 class="page-title">MindShare</h1>
+
+    <div class="posts-container">
+      <% for (let post of posts) { %>
+      <div class="post-card">
+        <div class="post-header">
+          <span class="username">@<%= post.username %></span>
+        </div>
+
+        <h3 class="feed-title"><%= post.title %></h3>
+
+        <div class="post-actions">
+          <form action="/posts/<%= post.id %>" method="get">
+            <button class="action-btn view">View</button>
+          </form>
+
+          <form action="/posts/<%= post.id %>/edit" method="get">
+            <button class="action-btn edit">Edit</button>
+          </form>
+
+          <form action="/posts/<%= post.id %>?_method=DELETE" method="post">
+            <button class="action-btn delete">Delete</button>
+          </form>
+        </div>
+      </div>
+      <% } %>
+    </div>
+
+    <a href="/posts/new" class="create-post-btn">+ Create New Post</a>
+  </body>
+</html>
