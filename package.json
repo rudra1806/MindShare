@@ -1,9 +1,9 @@
 {
-  "name": "restapis",
+  "name": "MindShare",
   "version": "1.0.0",
-  "description": "the GOAT RudrA",
+  "description": "initialization of project structure and dependencies",
   "license": "ISC",
-  "author": "rudra",
+  "author": "the GOAT RudrA SanandiyA",
   "type": "commonjs",
   "main": "index.js",
   "scripts": {
