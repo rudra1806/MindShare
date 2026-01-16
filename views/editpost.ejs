@@ -15,8 +15,16 @@
     <h2 class="post-heading">Edit Your Post</h2>
 
     <div class="post-meta">
-        <span><strong>@<%= post.username %></strong></span>
+        <span><strong>Author:</strong> @<%= post.username %></span>
         <span><strong>ID:</strong> <%= post.id %></span>
+        <span>
+          <strong>Created:</strong> 
+          <%= new Date(post.created_at).toLocaleDateString('en-US', { 
+            year: 'numeric', 
+            month: 'short', 
+            day: 'numeric'
+          }) %>
+        </span>
     </div>
 
     <form action="/posts/<%= post.id %>?_method=PATCH" method="post" class="edit-form">
