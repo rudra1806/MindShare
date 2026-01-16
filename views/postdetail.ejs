@@ -13,9 +13,18 @@
       <h2 class="post-heading">Post Details</h2>
 
       <div class="post-meta">
-        <span><strong>@<%= post.username %></strong></span>
+        <span><strong>Author:</strong> @<%= post.username %></span>
         <span><strong>ID:</strong> <%= post.id %></span>
-        <span><strong>Created at:</strong> <%= post.created_at %></span>
+        <span>
+          <strong>Published:</strong> 
+          <%= new Date(post.created_at).toLocaleDateString('en-US', { 
+            year: 'numeric', 
+            month: 'long', 
+            day: 'numeric',
+            hour: '2-digit',
+            minute: '2-digit'
+          }) %>
+        </span>
       </div>
 
       <h3 class="post-title"><%= post.title %></h3>
