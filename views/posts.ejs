@@ -17,6 +17,7 @@
         </div>
 
         <h3 class="feed-title"><%= post.title %></h3>
+        <h5 class="feed-title">Created at: <%= post.created_at %></h5>
 
         <div class="post-actions">
           <form action="/posts/<%= post.id %>" method="get">
